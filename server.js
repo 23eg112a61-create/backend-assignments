@@ -7,12 +7,10 @@ import { authorRoute } from './APIs/AuthorAPI.js'
 import { adminRoute } from './APIs/AdminAPI.js'
 import { commonRoute } from './APIs/commonAPI.js'
 config()//process .env
-
 const app=exp()
 //add body parser middleware
 app.use(exp.json())
 app.use(cookieParser())
-
 // connect routes
 app.use("/user-api", userRoute)
 app.use("/author-api", authorRoute)
